@@ -1,0 +1,33 @@
+﻿@model List<SalesProfile.Models.Certificate>
+
+@{
+    ViewData["Title"] = "Certificates";
+}
+
+<h2>Certificates</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Institution</th>
+            <th>Completion Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cert in Model)
+        {
+                <tr>
+                    <td>@cert.Name</td>
+                    <td>@cert.Institution</td>
+                    <td>@cert.CompletionDate.ToShortDateString()</td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@cert.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add New Certificate</a>

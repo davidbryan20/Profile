@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container text-center">
+    <h1 class="display-4">Welcome to SalesProfile</h1>
+    <p class="lead">A showcase of my skills, certifications, and projects.</p>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <h3>📜 Certifications</h3>
+            <p>Check out my professional certifications.</p>
+            <a class="btn btn-primary" asp-controller="Certificate" asp-action="Index">View Certificates</a>
+        </div>
+        <div class="col-md-4">
+            <h3>💼 Projects</h3>
+            <p>Explore my past and current projects.</p>
+            <a class="btn btn-success" asp-controller="Project" asp-action="Index">View Projects</a>
+        </div>
+        <div class="col-md-4">
+            <h3>⚙️ Skills</h3>
+            <p>Learn more about my technical and soft skills.</p>
+            <a class="btn btn-info" asp-controller="Skills" asp-action="Index">View Skills</a>
+        </div>
+    </div>
+</div>

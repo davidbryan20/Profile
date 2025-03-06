@@ -1,0 +1,19 @@
+﻿@model SalesProfile.Models.Project
+
+@{
+    ViewData["Title"] = "Delete Project";
+}
+
+<h2>Are you sure you want to delete this project?</h2>
+
+<div>
+    <h4>Project: @Model.Name</h4>
+    <p>Description: @Model.Description</p>
+    <p>GitHub Link: <a href="@Model.GitHubUrl" target="_blank">@Model.GitHubUrl</a></p>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

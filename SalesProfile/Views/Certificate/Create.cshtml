@@ -1,0 +1,27 @@
+﻿@model SalesProfile.Models.Certificate
+
+@{
+    ViewData["Title"] = "Add Certificate";
+}
+
+<h2>Add Certificate</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input asp-for="Name" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Institution</label>
+        <input asp-for="Institution" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Completion Date</label>
+        <input asp-for="CompletionDate" type="date" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Certificate URL</label>
+        <input asp-for="CertificateUrl" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
